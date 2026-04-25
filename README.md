@@ -93,20 +93,20 @@ Kernel Space (.github/)          Design Space (design/)          User Space (/ro
 
 ```
 aionix/
-├── .github/                    (Kernel Space - 統治する場所)
-│   ├── workflows/              # GitHub Actions
-│   ├── policies/               # 実行ポリシー
-│   ├── approval-gates/         # 承認ゲート定義
-│   └── packages/               # Package 配布ルール
+├── .github/                    (Kernel Space - Agent 動作制御)
+│   ├── workflows/              # GitHub Actions / CI/CD
+│   ├── policies/               # Agent 実行ポリシー
+│   ├── approval-gates/         # Agent 承認ゲート定義
+│   └── packages/               # Agent Package 配布ルール
 │
-├── design/                     (Design Space - 考える場所)
+├── design/                     (Design Space - 利用者自由領域)
 │   ├── philosophy/             # 理念・背景
-│   ├── architecture/            # システム設計
-│   ├── specifications/          # 実装仕様
+│   ├── architecture/           # システム設計
+│   ├── specifications/         # 実装仕様
 │   ├── agents/                 # エージェント設計
 │   └── decisions/              # 設計決定記録
 │
-└── root/                       (User Space - 作業させる場所)
+└── root/                       (User Space - Agent 実行空間)
     ├── bin/                    # 実行可能ファイル
     ├── etc/aionix/             # 設定ファイル
     │   ├── agents/
