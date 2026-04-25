@@ -93,27 +93,40 @@ Kernel Space (.github/)          Design Space (design/)          User Space (/ro
 
 ```
 aionix/
-├── .github/
+├── .github/                    (Kernel Space - 統治する場所)
 │   ├── workflows/              # GitHub Actions
 │   ├── policies/               # 実行ポリシー
 │   ├── approval-gates/         # 承認ゲート定義
 │   └── packages/               # Package 配布ルール
 │
-├── design/                     # 設計・計画層
+├── design/                     (Design Space - 考える場所)
 │   ├── philosophy/             # 理念・背景
 │   ├── architecture/            # システム設計
 │   ├── specifications/          # 実装仕様
 │   ├── agents/                 # エージェント設計
 │   └── decisions/              # 設計決定記録
 │
-└── root/                       # ユーザー空間（実装フェーズで構築）
-    ├── agents/                 # Agent 実装
-    ├── runtime/                # Core runtime
-    ├── skills/                 # Skill 実装
+└── root/                       (User Space - 作業させる場所)
+    ├── bin/                    # 実行可能ファイル
     ├── etc/aionix/             # 設定ファイル
-    ├── lib/aionix/             # ライブラリ
+    │   ├── agents/
+    │   ├── skills/
+    │   ├── packages/
+    │   ├── policies/
+    │   └── systemd/
+    ├── lib/aionix/             # ライブラリ・実装
+    │   ├── core/
+    │   ├── agents/
+    │   ├── skills/
+    │   ├── tools/
+    │   └── utils/
     └── var/
-        ├── lib/aionix/         # 状態・キャッシュ
+        ├── lib/aionix/         # ランタイム状態・キャッシュ
+        │   ├── packages/
+        │   ├── workspace/
+        │   ├── cache/
+        │   ├── state/
+        │   └── memory/
         ├── log/aionix/         # ログ
         └── run/aionix/         # ソケット・lock
 ```
