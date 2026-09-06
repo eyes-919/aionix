@@ -1,0 +1,6 @@
+.cache/
+data/
+.venv/
+__pycache__/
+*.pyc
+report.md
