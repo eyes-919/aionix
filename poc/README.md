@@ -19,6 +19,14 @@ aionix 側にコピーを残していたが、note-like-bot 側で開発が進�
 古いコピーが「動く POC」に見えてしまい、拾った人が存在しない機能を探すことになる。
 二重管理をやめる。
 
+### 引き継ぎ書
+
+**note 関連の企画・PoC セッションを引き継いだ場合は、
+note-like-bot の `docs/handoff-planning-session.md` を最初に読むこと。**
+未検証のもの、保留中の決定、実行環境の制約、やってはいけないことがまとまっている。
+
+https://github.com/eyes-919/note-like-bot/blob/main/docs/handoff-planning-session.md
+
 ### 調査記録は design/ に残す
 
 [design/specifications/008_202609060300_note配信アルゴリズム調査とPOC設計.md](../design/specifications/008_202609060300_note配信アルゴリズム調査とPOC設計.md)
