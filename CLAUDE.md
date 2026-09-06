@@ -139,6 +139,15 @@ python -m noteseek advise --corpus data/corpus.jsonl --draft a.md --tags 生成A
 
 ## 関連リポジトリ
 
-`eyes-919/note-mcp-automation` は、この POC の成果を組み込む対象となる別リポジトリ
-(Node.js)。note 記事を `READY_FOR_HUMAN_PUBLISH` まで準備する基盤で、
-**公開操作は意図的に実装していない**。そちらへ変更を提案する際はこの境界を守ること。
+| リポジトリ | 関係 |
+|---|---|
+| `eyes-919/note-like-bot` | **noteseek POC の移設先。こちらが本流**。note の自動エンゲージメント基盤 (Node.js + macOS アプリ)。企画・調査・指示書作成をこのセッション、実装を別セッションが担当する分担になっている |
+| `eyes-919/note-mcp-automation` | note 記事を `READY_FOR_HUMAN_PUBLISH` まで準備する基盤 (Node.js)。**公開操作は意図的に実装していない**。変更を提案する際はこの境界を守ること |
+
+`poc/note-algorithm` は note-like-bot の `poc/note-algorithm` に移設済み。
+**note 向けの作業は note-like-bot 側が正本**であり、そちらの `CLAUDE.md` に
+役割分担・受け渡し規約・調査時の安全条件 (実スキ禁止、`node -e` 禁止など) が
+明文化されている。note 関連の依頼を受けたら、まずそちらを読むこと。
+
+aionix 側のこのコピーは調査当時の記録として残している。
+両方を編集しないこと。変更は note-like-bot 側に入れる。
